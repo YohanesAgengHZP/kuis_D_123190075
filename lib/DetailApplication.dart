@@ -25,7 +25,7 @@ class DetailAplikasi extends StatelessWidget {
           children: [
             isiaplikasi(),
             deskripsiaplikasi(),
-            //buildButton(),
+            buildButton(),
           ],
         )
       )
@@ -77,6 +77,21 @@ class DetailAplikasi extends StatelessWidget {
     );
   }
 
-
+  Widget buildButton(){
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 10),
+      width: double.infinity,
+      child: ElevatedButton(
+        onPressed: () => print('test'),
+        child: Text(
+          'Go To Appstore',
+          style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.bold
+          ),
+        ),
+      ),
+    );
+  }
 
   }
